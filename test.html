@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark and Darker Damage Calculator Prototype</title>
+    <style>
+        /* Add your CSS styles here */
+        #container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .item {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Item Selection and Total Calculation</h1>
+    
+    <div id="container">
+        <div class="playerClass">
+            <h2>Player Class</h2>
+            <label for="playerClass">Class:</label>
+            <select id="playerClass">
+                <option value="warrior">Warrior</option>
+                <option value="mage">Mage</option>
+                <option value="rogue">Rogue</option>
+            </select>
+        </div>
+
+        <div class="item">
+            <label for="item1">Item 1</label>
+                <select id = "item1">
+                    <option value="test1">Option 1</option>
+                    <option value="test2">Option 2</option>
+                    <option value="test3">Option 3</option>
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
+            </select>
+            <br>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
+        </div>
+        
+        <div class="item">
+            <h2>Item 2</h2>
+            <label for="item2Attribute">Attribute:</label>
+            <select id="item2Attribute">
+                <option value="5">Option 1</option>
+                <option value="10">Option 2</option>
+                <option value="15">Option 3</option>
+            </select>
+            <br>
+            <label for="item2Slider">Value:</label>
+            <input type="range" id="item2Slider" min="0" max="100" step="1" value="0">
+            <span id="item2Value">0</span>
+        </div>
+    </div>
+
+    <div>
+        <h2>Total Value:</h2>
+        <div id="totalValue">0</div>
+    </div>
+
+    <script>
+        // JavaScript code for calculating and updating the total value
+
+        //object to store all compatible items for each class, to avoid invalid selections.
+        classItems = {
+            fighter: {
+                //items here
+            },
+            ranger: {
+                //items here
+            },
+            wizard: {
+                //items here    
+            },
+            barbarian: {
+                //items here
+            },  
+            rogue: {
+                //items here
+            },
+            cleric: {
+                //items here
+            },
+            warlock: {
+                //items here
+            },
+            bard: {
+                //items here
+            }
+        }
+
+        const item1Attribute = document.getElementById("item1Attribute");
+        const item1Slider = document.getElementById("item1Slider");
+        const item1Value = document.getElementById("item1Value");
+
+        const item2Attribute = document.getElementById("item2Attribute");
+        const item2Slider = document.getElementById("item2Slider");
+        const item2Value = document.getElementById("item2Value");
+
+        const totalValue = document.getElementById("totalValue");
+
+        item1Attribute.addEventListener("change", updateTotal);
+        item1Slider.addEventListener("input", updateTotal);
+
+        item2Attribute.addEventListener("change", updateTotal);
+        item2Slider.addEventListener("input", updateTotal);
+
+        function updateTotal() {
+            const item1AttributeValue = parseInt(item1Attribute.value);
+            const item1SliderValue = parseInt(item1Slider.value);
+
+            const item2AttributeValue = parseInt(item2Attribute.value);
+            const item2SliderValue = parseInt(item2Slider.value);
+
+            const totalPrice = item1AttributeValue + item1SliderValue + item2AttributeValue + item2SliderValue;
+            totalValue.textContent = totalPrice;
+        }
+    </script>
+</body>
+</html>

@@ -18,7 +18,9 @@
 </head>
 <body>
     <h1>Item Selection and Total Calculation</h1>
+    <script src="script.js"></script>
     
+    <!-- playerClass section -->
     <div id="container">
         <div class="playerClass">
             <h2>Player Class</h2>
@@ -35,10 +37,10 @@
             </select>
         </div>
 
-        
+        <!-- mainhand Section -->
         <div class="item">
             <h2>Mainhand</h2>
-                <select id = "item1">
+                <select id = "mainHand">
                 </select>
             <label for="item1Attribute">Attribute:</label>
             <select id="item1Attribute">
@@ -52,9 +54,10 @@
             <span id="item1Value">0</span>
         </div>
 
+        <!-- offhand section -->
         <div class="item">
             <h2>Offhand</h2>
-                <select id = "">
+                <select id = "offHand">
                     <option value="test1">Option 1</option>
                     <option value="test2">Option 2</option>
                     <option value="test3">Option 3</option>
@@ -71,9 +74,10 @@
             <span id="item1Value">0</span>
         </div>
 
+        <!-- head section -->
         <div class="item">
             <h2>Head</h2>
-                <select id = "item1">
+                <select id = "head">
                     <option value="test1">Option 1</option>
                     <option value="test2">Option 2</option>
                     <option value="test3">Option 3</option>
@@ -90,9 +94,10 @@
             <span id="item1Value">0</span>
         </div>
 
+        <!-- chest section -->
         <div class="item">
             <h2>Chest</h2>
-                <select id = "item1">
+                <select id = "chest">
                     <option value="test1">Option 1</option>
                     <option value="test2">Option 2</option>
                     <option value="test3">Option 3</option>
@@ -109,9 +114,10 @@
             <span id="item1Value">0</span>
         </div>
 
+        <!-- legs section -->
         <div class="item">
             <h2>Legs</h2>
-                <select id = "item1">
+                <select id = "legs">
                     <option value="test1">Option 1</option>
                     <option value="test2">Option 2</option>
                     <option value="test3">Option 3</option>
@@ -128,180 +134,30 @@
             <span id="item1Value">0</span>
         </div>
         
+        <!-- feet section -->
         <div class="item">
             <h2>Feet</h2>
-            <label for="item2Attribute">Attribute:</label>
-            <select id="item2Attribute">
-                <option value="5">Option 1</option>
-                <option value="10">Option 2</option>
-                <option value="15">Option 3</option>
+                <select id = "feet">
+                    <option value="test1">Option 1</option>
+                    <option value="test2">Option 2</option>
+                    <option value="test3">Option 3</option>
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
             </select>
             <br>
-            <label for="item2Slider">Value:</label>
-            <input type="range" id="item2Slider" min="0" max="100" step="1" value="0">
-            <span id="item2Value">0</span>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
         </div>
-    </div>
 
     <div>
         <h2>Total Value:</h2>
         <div id="totalValue">0</div>
     </div>
 
-    <script>
-        // JavaScript code for calculating and updating the total value
-
-        //object to store all compatible items for each class, to avoid invalid selections.
-        classItems = {
-            figher: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            barbarian: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            rogue: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            cleric: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            wizard: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            ranger: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            warlock: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            },
-            bard: {
-                mainHand: ["test", "test"],
-                offHand: ["test", "test"],
-                head: ["test", "test"],
-                chest: ["test", "test"],
-                legs: ["test", "test"],
-                feet: ["test", "test"],
-                ring1: ["test", "test"],
-                ring2: ["test", "test"],
-                neck: ["test", "test"],
-                cloak: ["test", "test"],
-            }
-        }
-
-        class playerClass {
-            constructor(){
-                try{
-                    this.class = document.getElementById('playerClass');
-                    this.items = classItems[this.class];
-                }
-                catch(err){
-                    console.log("Class Not Selected");
-                }
-            }
-        }
-
-        //damage formula : 
-        //((((((Base Weapon/Magical Damage + "Buff" Weapon Damage) * Combo Bonus * Impact Zone Bonus) + "Gear" Weapon Damage/Magical Damage + Divine Strike Damage) 
-        //* (1 + Power Bonus)) + Additional Damage) * (Hit Location Bonus) * (1 - (Damage Reduction * (1 - Penetration))) * (1 - Projectile Reduction)) + True Damage
-        
-        const select = document.getElementById('item1');
-        currClass = new playerClass();
-        classItems[currClass.class]["mainHand"].forEach(item => {
-        const option = document.createElement('option');
-        option.value = item;
-        option.text = item;
-        select.appendChild(option);
-        });
-        
-        const item1Attribute = document.getElementById("item1Attribute");
-        const item1Slider = document.getElementById("item1Slider");
-        const item1Value = document.getElementById("item1Value");
-
-        const item2Attribute = document.getElementById("item2Attribute");
-        const item2Slider = document.getElementById("item2Slider");
-        const item2Value = document.getElementById("item2Value");
-
-        const totalValue = document.getElementById("totalValue");
-
-        item1Attribute.addEventListener("change", updateTotal);
-        item1Slider.addEventListener("input", updateTotal);
-
-        item2Attribute.addEventListener("change", updateTotal);
-        item2Slider.addEventListener("input", updateTotal);
-
-        function updateTotal() {
-            const item1AttributeValue = parseInt(item1Attribute.value);
-            const item1SliderValue = parseInt(item1Slider.value);
-
-            const item2AttributeValue = parseInt(item2Attribute.value);
-            const item2SliderValue = parseInt(item2Slider.value);
-
-            const totalPrice = item1AttributeValue + item1SliderValue + item2AttributeValue + item2SliderValue;
-            totalValue.textContent = totalPrice;
-        }
-    </script>
 </body>
 </html>

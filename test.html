@@ -24,14 +24,93 @@
             <h2>Player Class</h2>
             <label for="playerClass">Class:</label>
             <select id="playerClass">
-                <option value="warrior">Warrior</option>
-                <option value="mage">Mage</option>
+                <option value="fighter">Fighter</option>
+                <option value="barbarian">Barbarian</option>
                 <option value="rogue">Rogue</option>
+                <option value="cleric">Cleric</option>
+                <option value="wizard">Wizard</option>
+                <option value="ranger">Ranger</option>
+                <option value="warlock">Warlock</option>
+                <option value="bard">Bard</option>
             </select>
         </div>
 
+        
         <div class="item">
-            <label for="item1">Item 1</label>
+            <h2>Mainhand</h2>
+                <select id = "item1">
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
+            </select>
+            <br>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
+        </div>
+
+        <div class="item">
+            <h2>Offhand</h2>
+                <select id = "">
+                    <option value="test1">Option 1</option>
+                    <option value="test2">Option 2</option>
+                    <option value="test3">Option 3</option>
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
+            </select>
+            <br>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
+        </div>
+
+        <div class="item">
+            <h2>Head</h2>
+                <select id = "item1">
+                    <option value="test1">Option 1</option>
+                    <option value="test2">Option 2</option>
+                    <option value="test3">Option 3</option>
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
+            </select>
+            <br>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
+        </div>
+
+        <div class="item">
+            <h2>Chest</h2>
+                <select id = "item1">
+                    <option value="test1">Option 1</option>
+                    <option value="test2">Option 2</option>
+                    <option value="test3">Option 3</option>
+                </select>
+            <label for="item1Attribute">Attribute:</label>
+            <select id="item1Attribute">
+                <option value="10">Option 1</option>
+                <option value="20">Option 2</option>
+                <option value="30">Option 3</option>
+            </select>
+            <br>
+            <label for="item1Slider">Value:</label>
+            <input type="range" id="item1Slider" min="0" max="100" step="1" value="0">
+            <span id="item1Value">0</span>
+        </div>
+
+        <div class="item">
+            <h2>Legs</h2>
                 <select id = "item1">
                     <option value="test1">Option 1</option>
                     <option value="test2">Option 2</option>
@@ -50,7 +129,7 @@
         </div>
         
         <div class="item">
-            <h2>Item 2</h2>
+            <h2>Feet</h2>
             <label for="item2Attribute">Attribute:</label>
             <select id="item2Attribute">
                 <option value="5">Option 1</option>
@@ -74,32 +153,129 @@
 
         //object to store all compatible items for each class, to avoid invalid selections.
         classItems = {
-            fighter: {
-                //items here
-            },
-            ranger: {
-                //items here
-            },
-            wizard: {
-                //items here    
+            figher: {
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
             },
             barbarian: {
-                //items here
-            },  
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
+            },
             rogue: {
-                //items here
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
             },
             cleric: {
-                //items here
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
+            },
+            wizard: {
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
+            },
+            ranger: {
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
             },
             warlock: {
-                //items here
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
             },
             bard: {
-                //items here
+                mainHand: ["test", "test"],
+                offHand: ["test", "test"],
+                head: ["test", "test"],
+                chest: ["test", "test"],
+                legs: ["test", "test"],
+                feet: ["test", "test"],
+                ring1: ["test", "test"],
+                ring2: ["test", "test"],
+                neck: ["test", "test"],
+                cloak: ["test", "test"],
             }
         }
 
+        class playerClass {
+            constructor(){
+                try{
+                    this.class = document.getElementById('playerClass');
+                    this.items = classItems[this.class];
+                }
+                catch(err){
+                    console.log("Class Not Selected");
+                }
+            }
+        }
+
+        //damage formula : 
+        //((((((Base Weapon/Magical Damage + "Buff" Weapon Damage) * Combo Bonus * Impact Zone Bonus) + "Gear" Weapon Damage/Magical Damage + Divine Strike Damage) 
+        //* (1 + Power Bonus)) + Additional Damage) * (Hit Location Bonus) * (1 - (Damage Reduction * (1 - Penetration))) * (1 - Projectile Reduction)) + True Damage
+        
+        const select = document.getElementById('item1');
+        currClass = new playerClass();
+        classItems[currClass.class]["mainHand"].forEach(item => {
+        const option = document.createElement('option');
+        option.value = item;
+        option.text = item;
+        select.appendChild(option);
+        });
+        
         const item1Attribute = document.getElementById("item1Attribute");
         const item1Slider = document.getElementById("item1Slider");
         const item1Value = document.getElementById("item1Value");

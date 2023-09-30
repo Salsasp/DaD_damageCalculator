@@ -3,36 +3,138 @@
 //object to store all compatible items for each class, to avoid invalid selections.
 classItems = {
     fighter: {
-        mainHand: ["a", "b"],
-        offHand: ["test", "test"],
-        head: ["test", "test"],
-        chest: ["test", "test"],
-        legs: ["test", "test"],
-        feet: ["test", "test"],
+        mainHand: ["Battle Axe", "Crossbow", "Halberd", "Longsword", "Pavise", "Spear", "Zweihander",
+            "Arming Sword",
+            "Buckler",
+            "Falchion",
+            "Flanged Mace",
+            "Hatchet",
+            "Heater Shield",
+            "Horsemans Axe",
+            "Round Shield",
+            "Short Sword",
+            "Viking Sword"
+        ],
+        offHand: ["Battle Axe", "Crossbow", "Halberd", "Longsword", "Pavise", "Spear", "Zweihander",
+            "Castillon Dagger",
+            "Buckler",
+            "Heater Shield",
+            "Round Shield",
+            "Short Sword",
+            "Lantern"
+        ],
+        head: [
+            "Armet",
+            "Barbuta Helmet",
+            "Chapel De Fer",
+            "Chaperon",
+            "Hounskull",
+            "Kettle Hat",
+            "Leather Cap",
+            "Visored Barbuta Helmet"
+        ],
+        chest: [
+            "Dark Plate Armor",
+            "Doublet",
+            "Fine Cuirass",
+            "Padded Tunic",
+            "Regal Gambeson",
+            "Templar Armor"
+        ],
+        legs: [
+            "Cloth Pants",
+            "Heavy Leather Leggings",
+            "Leather Leggings",
+            "Loose Trousers",
+            "Padded Leggings",
+            "Plate Pants"
+        ],
+        hands: [
+            "Heavy Gauntlet",
+            "Leather Gloves",
+            "Rawhide Gloves",
+            "Reinforced Gloves",
+            "Riveted Gloves"
+        ],
+        feet: [
+            "Adventurer Boots",
+            "Heavy Boots",
+            "Laced Turnshoe",
+            "Lightfoot Boots",
+            "Old Shoes",
+            "Plate Boots",
+            "Rugged Boots"
+        ],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
         neck: ["test", "test"],
         cloak: ["test", "test"],
     },
     barbarian: {
-        mainHand: ["c", "d"],
-        offHand: ["test", "test"],
-        head: ["test", "test"],
-        chest: ["test", "test"],
-        legs: ["test", "test"],
-        feet: ["test", "test"],
+        mainHand: [
+            "Bardiche",
+            "Battle Axe",
+            "Double Axe",
+            "Felling Axe",
+            "Quarterstaff",
+            "War Maul",
+            "Zweihander",
+            "Horsemans Axe",
+            "Viking Sword"
+        ],
+        offHand: [
+            "Bardiche",
+            "Battle Axe",
+            "Double Axe",
+            "Felling Axe",
+            "Quarterstaff",
+            "War Maul",
+            "Zweihander"
+        ],
+        head: ["Barbuta Helmet", "Gjermundbu", "Leather Cap", "Viking Helmet"],
+        chest: ["Northern Full Tunic", "Padded Tunic", "Regal Gambeson"],
+        legs: [
+            "Cloth Pants", 
+            "Heavy Leather Leggings", 
+            "Leather Leggings", 
+            "Loose Trousers", 
+            "Padded Leggings"
+        ],
+        hands: ["Leather Gloves", "Rawhide Gloves", "Reinforced Gloves", "Riveted Gloves"],
+        feet: [
+            "Adventurer Boots", 
+            "Heavy Boots", 
+            "Laced Turnshoe", 
+            "Lightfoot Boots", 
+            "Old Shoes", 
+            "Rugged Boots"
+        ],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
         neck: ["test", "test"],
         cloak: ["test", "test"],
     },
     rogue: {
-        mainHand: ["test", "test"],
-        offHand: ["test", "test"],
-        head: ["test", "test"],
-        chest: ["test", "test"],
-        legs: ["test", "test"],
-        feet: ["test", "test"],
+        mainHand: ["Kris Dagger", "Rapier", "Rondel Dagger"],
+        offHand: ["Castillon Dagger", "Short Sword", "Stiletto Dagger", "Lantern"],
+        head: ["Leather Cap", "Rogue Cowl", "Shadow Hood", "Shadow Mask"],
+        chest: ["Doublet", "Marauder Outfit", "Padded Tunic", "Regal Gambeson"],
+        legs: [
+            "Cloth Pants", 
+            "Heavy Leather Leggings",
+            "Leather Leggings", 
+            "Loose Trousers", 
+            "Padded Leggings"
+        ],
+        hands: ["Leather Gloves", "Rawhide Gloves", "Reinforced Gloves", "Riveted Gloves"],
+        feet: [
+            "Adventurer Boots", 
+            "Heavy Boots", 
+            "Laced Turnshoe", 
+            "Lightfoot Boots", 
+            "Old Shoes", 
+            "Rugged Boots"
+        ],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
         neck: ["test", "test"],
@@ -44,6 +146,7 @@ classItems = {
         head: ["test", "test"],
         chest: ["test", "test"],
         legs: ["test", "test"],
+        hands: [],
         feet: ["test", "test"],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
@@ -56,6 +159,7 @@ classItems = {
         head: ["test", "test"],
         chest: ["test", "test"],
         legs: ["test", "test"],
+        hands: [],
         feet: ["test", "test"],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
@@ -68,6 +172,7 @@ classItems = {
         head: ["test", "test"],
         chest: ["test", "test"],
         legs: ["test", "test"],
+        hands: [],
         feet: ["test", "test"],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
@@ -80,6 +185,7 @@ classItems = {
         head: ["test", "test"],
         chest: ["test", "test"],
         legs: ["test", "test"],
+        hands: [],
         feet: ["test", "test"],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
@@ -92,6 +198,7 @@ classItems = {
         head: ["test", "test"],
         chest: ["test", "test"],
         legs: ["test", "test"],
+        hands: [],
         feet: ["test", "test"],
         ring1: ["test", "test"],
         ring2: ["test", "test"],
@@ -105,56 +212,33 @@ classItems = {
 //* (1 + Power Bonus)) + Additional Damage) * (Hit Location Bonus) * (1 - (Damage Reduction * (1 - Penetration))) * (1 - Projectile Reduction)) + True Damage
 
 function populateSelect(selectElement, playerClassSelect){
+    console.log(selectElement.value);
     selectElement.innerHTML = '';
-    classItems[playerClassSelect.value].mainHand.forEach(item => {
+    classItems[playerClassSelect.value][selectElement.getAttribute('id')].forEach(item => {
         const option = document.createElement('option');
         option.value = item;
         option.text = item;
-        item1Select.appendChild(option);
+        selectElement.appendChild(option);
     });
 }
 
 const playerClassSelect = document.getElementById('playerClass');
-const mainHandSelect = document.getElementById('item1');
+const mainHandSelect = document.getElementById('mainHand');
+const offHandSelect = document.getElementById('offHand');
+const headSelect = document.getElementById('head');
+const chestSelect = document.getElementById('chest');
+const handsSelect = document.getElementById('hands');
+const legsSelect = document.getElementById('legs');
+const feetSelect = document.getElementById('feet');
+itemSelects = [mainHandSelect, offHandSelect, headSelect, chestSelect, handsSelect, legsSelect, feetSelect];
+itemSelects.forEach(item => {
+    populateSelect(item, playerClassSelect);
+});
 // Add an event listener to the select element that reacts to changes
 playerClassSelect.addEventListener('change', () => {
     const selectedClass = playerClassSelect.value;
     console.log(`Selected value: ${selectedClass}`);
-    const item1Select = document.getElementById('item1');
-    item1Select.innerHTML = '';
-    classItems[playerClassSelect.value].mainHand.forEach(item => {
-    const option = document.createElement('option');
-    option.value = item;
-    option.text = item;
-    item1Select.appendChild(option);
+    itemSelects.forEach(item => {
+        populateSelect(item, playerClassSelect);
     });
 });
-
-
-
-const item1Attribute = document.getElementById("item1Attribute");
-const item1Slider = document.getElementById("item1Slider");
-const item1Value = document.getElementById("item1Value");
-
-const item2Attribute = document.getElementById("item2Attribute");
-const item2Slider = document.getElementById("item2Slider");
-const item2Value = document.getElementById("item2Value");
-
-const totalValue = document.getElementById("totalValue");
-
-item1Attribute.addEventListener("change", updateTotal);
-item1Slider.addEventListener("input", updateTotal);
-
-item2Attribute.addEventListener("change", updateTotal);
-item2Slider.addEventListener("input", updateTotal);
-
-function updateTotal() {
-    const item1AttributeValue = parseInt(item1Attribute.value);
-    const item1SliderValue = parseInt(item1Slider.value);
-
-    const item2AttributeValue = parseInt(item2Attribute.value);
-    const item2SliderValue = parseInt(item2Slider.value);
-
-    const totalPrice = item1AttributeValue + item1SliderValue + item2AttributeValue + item2SliderValue;
-    totalValue.textContent = totalPrice;
-}
